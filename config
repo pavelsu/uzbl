@@ -270,7 +270,8 @@ set ebind     = @mode_bind global,-insert
 @cbind  <Ctrl>p = hardcopy
 
 # Web searching binds
-@cbind  gg<Google:>_         = uri http://www.google.com/search?q=\@<encodeURIComponent(%r)>\@
+@cbind  gg<Google:>_         = uri http://www.google.ru/search?q=\@<encodeURIComponent(%r)>\@
+@cbind  gl<Lucky:>_         = uri http://www.google.ru/search?btnI=foo&q=\@<encodeURIComponent(%r)>\@
 @cbind  gy<Yandex:>_         = uri http://yandex.ru/yandsearch?text=\@<encodeURIComponent(%r)>\@
 @cbind  \\a<Archwiki:>_  = uri http://wiki.archlinux.org/index.php/Special:Search?search=\@<encodeURIComponent(%r)>\@&go=Go
 @cbind  \\w<Wikipedia:>_  = uri http://ru.wikipedia.org/w/index.php?title=Special:Search&search=\@<encodeURIComponent(%r)>\@&go=Go
@@ -345,7 +346,7 @@ set follow_hint_keys = qwertyasdfgzxcvb
 #set follow_hint_keys = asdfghjkl;
 #set follow_hint_keys = thsnd-rcgmvwb/;789aefijkopquxyz234
 @cbind  f*  = spawn @scripts_dir/follow.sh \@< uzbl.follow("\@follow_hint_keys", "%s", 'click') >\@
-@cbind  F*  = spawn @scripts_dir/follow.sh \@< uzbl.follow("\@follow_hint_keys", "%s", 'newwindow') >\@
+#@cbind  F*  = spawn @scripts_dir/follow.sh \@< uzbl.follow("\@follow_hint_keys", "%s", 'newwindow') >\@
 #@cbind  f*  = spawn @scripts_dir/follow.sh \@< uzbl.follow("\@follow_hint_keys", "%s", 'returnuri') >\@ set
 @cbind  F*  = spawn @scripts_dir/follow.sh \@< uzbl.follow("\@follow_hint_keys", "%s", 'returnuri') >\@ clipboard
 #@cbind  fi   = spawn @scripts_dir/go_input.sh
